@@ -1,0 +1,44 @@
+package licao50;
+
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author Usuário Gabriel Galindo.
+ * Desenvolva um programa que faça o sorteio de 20 números entre 0 e 10 e
+mostre na tela:
+a) Quais foram os números sorteados
+b) Quantos números estão acima de 5
+c) Quantos números são divisíveis por 3
+ */
+public class Licao50 {
+
+   
+    public static void main(String[] args) {
+       
+      int quant, i = 0, cinc = 0, div = 0;
+          quant = Integer.parseInt(JOptionPane.showInputDialog(" Informe a quantidade de números pra sortear: "));
+        
+      int sort [] = new int[quant];
+        
+      while ( i < sort.length){
+        sort [i] = (int)(Math.random()*10+1);
+          
+            JOptionPane.showMessageDialog(null," O número sorteado é: " +sort[i]+".");
+            
+      
+        if(sort[i] > 5 ){
+            cinc++;
+        }
+        if(sort[i]%3 == 0){
+            div++;
+        }
+        i++;
+      }
+            JOptionPane.showMessageDialog(null,"----------RESULTADO---------");
+            JOptionPane.showMessageDialog(null," A quantidade de números acima de 5 foram: "+cinc+".");
+            JOptionPane.showMessageDialog(null," A quantidade de números divisíveis por 3 foram: "+div+".");
+            JOptionPane.showMessageDialog(null," _-_-_-_-ACaBoU-_-_-_-_");
+    }
+    
+}
